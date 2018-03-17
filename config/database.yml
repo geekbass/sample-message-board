@@ -17,8 +17,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  host: postgres
+  username: postgres
+  password: 
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -72,6 +73,7 @@ test:
 # available as an environment variable. For example:
 #
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#   DATABASE_URL="postgres://rails:mypass@postgres/sample-message-board_prod"
 #
 # You can use this database configuration with:
 #
@@ -81,3 +83,5 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+
+

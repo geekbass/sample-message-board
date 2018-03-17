@@ -1,5 +1,4 @@
 FROM ruby:2.3.3-slim
-ENV DATABASE_URL="postgres://myuser:mypass@postgres:5432/somedatabase"
 
 RUN apt-get update -qq \
 	&& apt-get install -y --no-install-recommends \
