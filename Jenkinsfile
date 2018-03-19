@@ -14,7 +14,7 @@ node {
     stage ('Build the new Docker Image') {
       sh """
        set +x
-       docker build -t bold-rails:${env.BUILD_TAG} .
+       docker build -t bold-rails:${env.GIT_COMMIT} .
        """
     }
 
@@ -28,7 +28,7 @@ node {
     stage ('Start New Rails App from New Image') {
       sh """
        set +x
-       docker run -d --rm  --link postgres --name rails -p 5000:5000  bold-ruby:${env.BUILD_TAG} bundle exec rails s -p 5000 -b '0.0.0.0' 
+       docker run -d --rm  --link postgres --name rails -p 5000:5000  bold-ruby:${env.GIT_COMMIT} bundle exec rails s -p 5000 -b '0.0.0.0' 
        """
     }
 /*
