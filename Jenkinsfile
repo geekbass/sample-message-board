@@ -39,13 +39,13 @@ node {
        docker run -d --rm  --link postgres --name rails -p 5000:5000  bold-ruby:${env.BUILD_TAG} bundle exec rails s -p 5000 -b '0.0.0.0' 
        """
     }
-#
- #   stage ('Notify') {
-  #    mail from: "email@email.com",
-   #        to: "email@email.com",
-    #       subject: "Rails Release for ${environment} Complete.",
-     #      body: "Jenkins Job ${env.JOB_NAME} - build  ${env.BUILD_NUMBER} for ${environment}. Please investigate."
-    #}
+/*
+    stage ('Notify') {
+      mail from: "email@email.com",
+           to: "email@email.com",
+           subject: "Rails Release for ${environment} Complete.",
+           body: "Jenkins Job ${env.JOB_NAME} - build  ${env.BUILD_NUMBER} for ${environment}. Please investigate."
+    }*/
   }
 
   catch (caughtError) {
