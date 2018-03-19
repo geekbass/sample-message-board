@@ -24,8 +24,6 @@ node {
        docker stop rails 
        """
     }
-
-    }
     
     stage ('Start New Rails App from New Image') {
       sh """
