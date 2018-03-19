@@ -25,12 +25,6 @@ node {
        """
     }
 
-
-    stage ('Remove Current Rails App') {
-      sh """
-       set +x
-       docker rm rails 
-       """
     }
     
     stage ('Start New Rails App from New Image') {
