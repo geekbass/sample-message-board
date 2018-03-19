@@ -14,7 +14,7 @@ node {
     stage ('Build the new Docker Image') {
       sh """
        set +x
-       cd sample-message-board/ && docker build -t bold-rails:${env.BUILD_TAG} .
+       docker build -t bold-rails:${env.BUILD_TAG} .
        """
     }
 
