@@ -31,7 +31,7 @@ Start the DB
 ```bash 
 docker run -d -v ${PWD}/db/data:/var/lib/postgresql/data --env-file .db-env --name postgres -p 5432:5432 postgres
 ```    
-Include the POSTRGRES_PASSWORD=$PASSWORD in the .db-env file 
+* Include the POSTRGRES_PASSWORD=$PASSWORD in the .db-env file 
 
 Start Rails App (It will not work right away)
 ```bash
@@ -81,7 +81,7 @@ docker run -it {--env-file .env} --link postgres --name rails -p 5000:5000  bold
 
 ### Postgres
 If the PGSQL needs restarted, just issue:
-'''bash
+```bash
 docker stop|start postgres 
 ```
 If you need to start a completely new instance or upgrade Postgres, just migrate the underlying attached volume to a new one or just remov the current running container and run a new with same '-v' argument. 
