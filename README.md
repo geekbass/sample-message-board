@@ -70,6 +70,7 @@ NOTE: This will currently only work if you have already completed the initial de
 
 See [jenkins](https://github.com/geekbass/sample-message-board/tree/master/jenkins) directory of repo for the job config and how to setup the Jenkins Pipeline.
 
+![Jenkins Pipeline](https://github.com/geekbass/sample-message-board/blob/master/images/jenkins-pipeline.jpg "Jenkins Pipeline")
 
 
 ## Troubleshooting and Some Notes
