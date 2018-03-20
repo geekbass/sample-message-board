@@ -68,7 +68,7 @@ Whenever there is a new code release, a new Docker Image will need to be created
 
 NOTE: This will currently only work if you have already completed the initial deployment steps above and both a rails app and the postgres db. 
 
-See [jenkins](https://github.com/geekbass/sample-message-board/tree/master/jenkins)jenkins directory of repo for the job config and how to setup the Jenkins Pipeline.
+See [jenkins](https://github.com/geekbass/sample-message-board/tree/master/jenkins) directory of repo for the job config and how to setup the Jenkins Pipeline.
 
 
 
